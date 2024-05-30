@@ -15,12 +15,17 @@ body {
 
   @include tablet{
     height: 73px;
+    margin: 1rem 2rem;
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+
+    @include tablet{
+        padding: 1rem 2rem;
+    }
   }
 
   &__logo {
@@ -44,6 +49,7 @@ body {
 
     @include tablet{
         padding: 0 2rem;
+        font-size: large;
     }
   }
 
