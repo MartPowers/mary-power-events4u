@@ -7,7 +7,9 @@
         border-radius: 1.75rem;
         height:10vh;
         width: 100%;
-        background-color: $deep-grey;
         margin: 1rem;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 }
