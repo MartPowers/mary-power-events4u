@@ -6,7 +6,9 @@ function header() {
   return (
 
     //outer div is container
-    <div className='header-container'>
+    <div className='header'>
+
+        <div className="header__container">
 
 {/* logo link here */}
         <div className='header__logo'>
@@ -15,10 +17,10 @@ function header() {
 
         {/* create an event button */}
         {/* outer container */}
-<button className='header__logo' type="submit">
+<button className='header__btn' type="submit">
     CREATE AN EVENT
 </button>
-      
+</div>
     </div>
   )
 }
