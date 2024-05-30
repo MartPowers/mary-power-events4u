@@ -6,11 +6,12 @@ import Hero from "./components/Hero/Hero";
 function App() {
   return (
     <div className="App">
-<Background />
+<div className="main-content">
 <Header />
 <Hero />
 <Footer />
-
+</div>
+<Background />
     </div>
   );
 }

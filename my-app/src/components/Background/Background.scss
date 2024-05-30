@@ -8,7 +8,7 @@
 --color2: 250, 255, 0;
 --color3: 214, 255, 52;
 --color-interactive: 140, 100, 255;
---circle-size: 60%;
+--circle-size: 100vmin;
 --blending: hard-light;
 }
 
@@ -51,27 +51,30 @@
 .gradient-bg {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
-// svg{
-//     display: none;
-// }
+.main-content {
+    position: relative;
+    z-index: 1; 
+  }
 
 .gradients-container {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .g1 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
-
+    border-radius: 50%;
     width: var(--circle-size);
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
@@ -87,7 +90,7 @@
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
-
+    border-radius: 50%;
     width: var(--circle-size);
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
@@ -103,7 +106,7 @@
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
-
+    border-radius: 50%;
     width: var(--circle-size);
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2 + 200px);
@@ -115,16 +118,16 @@
     opacity: 1;
 }
 
-.interactive{
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+// .interactive{
+//     position: absolute;
+//     background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+//     border-radius: 50%;
+//     mix-blend-mode: var(--blending);
 
-    mix-blend-mode: var(--blending);
+//     width: 100%;
+//     height: 100%;
+//     top: -50%;
+//     left: -50%;
 
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-
-    opacity: 0.7;
-}
+//     opacity: 0.7;
+// }
