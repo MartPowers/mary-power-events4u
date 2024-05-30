@@ -1,2 +1,15 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.hero{
+
+    &__container{
+
+    }
+
+    &__title{
+        color: white;
+        margin: 2rem;
+        width: 60%;
+    }
+}
