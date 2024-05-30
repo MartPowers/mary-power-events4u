@@ -1,0 +1,9 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header-container{
+    background-color: $deep-grey;
+    width: max-content;
+    height: 10vh;
+
+}
