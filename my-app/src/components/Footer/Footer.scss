@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer{
+
+    &__container{
+        border-radius: 1.75rem;
+        height:10vh;
+        width: 100%;
+        background-color: $deep-grey;
+        margin: 1rem;
+    }
+}
