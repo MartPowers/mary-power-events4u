@@ -1,4 +1,4 @@
-import React from "react";
+import "./Filters.scss";
 
 function Filters() {
   return (

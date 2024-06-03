@@ -1,3 +1,29 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.filters{
+
+    &__group{
+        margin: 1rem;
+    }
+
+    &__text{
+        color: white;
+    }
+
+    &__btn{
+        color: white;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 1.75rem;
+        border: solid 1px $green;
+        width: 100px;
+        padding: .5rem;
+        margin: .25rem;
+    }
+
+    &__section{
+        margin: 1rem;
+    }
+}
