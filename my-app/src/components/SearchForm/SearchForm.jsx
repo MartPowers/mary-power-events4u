@@ -20,7 +20,7 @@ function SearchForm() {
     <div>
       <form className="search-form">
         <div className="search-form__container">
-          <div className="search-form__group">
+          {/* <div className="search-form__group"> */}
           <input
             type="text"
             id="search"
@@ -29,7 +29,8 @@ function SearchForm() {
             className="search-form__input"
           />
           </div>
-
+          
+          <div className="search-form__group">
             <div className="dropdown">
               <button className="dropdown__btn" onClick={toggleDropdown}>
                   {selectedOption || 'select a city'}
@@ -47,10 +48,10 @@ function SearchForm() {
                       ))}
                   </div>
               )}
-          </div>
+          {/* </div> */}
         </div>
 
-        <div className="search-form__group">
+       
           <button className="search-form__btn">
             SEARCH
           </button>

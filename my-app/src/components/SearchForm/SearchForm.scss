@@ -4,10 +4,12 @@
 .search-form{
 
    &__container{
-    margin: 1rem;
+    margin: 1rem 1rem 0;
    }
     &__group{
-
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
     }
     &__input{
         background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1));
@@ -16,7 +18,7 @@
         border-radius: 1.75rem;
         border: none;
         margin: .5rem 0;
-        width: 75%;
+        width: 275px;
         height: 40px;
     }
     
@@ -26,8 +28,9 @@
         border-radius: 30px;
         color: white;
         padding: .75rem 1.25rem;
-        margin: 0rem 1rem;
-        width: 120px;
+        // margin: 0rem 1rem;
+        width: 135px;
+        height: 40px;
     }
 }
 
@@ -41,7 +44,9 @@
         border: none;
         color: white;
         padding: .75rem 1.25rem;
-        margin: 1rem .5rem 1rem 0;
+        margin: 1rem .5rem 1rem 1rem;
+        width: 135px;
+        height: 40px;
     }
 
     &__menu{
