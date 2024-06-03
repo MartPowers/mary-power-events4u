@@ -1,4 +1,5 @@
 import "./Events.scss";
+import "../../styles/partials/_global.scss"
 
 function Events() {
   return (
@@ -9,7 +10,7 @@ function Events() {
                 <img src="#" alt="#" className="events__img"/>
 
                 <div className="events__info">
-                    <p className="events__title">title</p>
+                    <h2 className="events__title">title</h2>
 
                     <div className="events__group">
                         <p className="events__text">location</p>

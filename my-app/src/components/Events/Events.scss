@@ -1,2 +1,53 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.events{
+
+    &__container{
+        height: 300px;
+        margin: 1rem;
+    }
+
+    &__card{
+        background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 1.75rem;
+        width: 100%;
+    }
+
+    &__img{
+        width: 100%;
+    }
+
+    &__info{
+        margin: 1rem;
+    }
+
+    &__title{
+        color: white;
+    }
+
+    &__group{
+
+    }
+
+    &__text{
+        color: white;
+        margin: 0;
+
+        &--price{
+            font-weight: 600;
+        }
+    }
+
+    &__btn{
+        background-color: $blue;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        padding: .75rem 1.25rem;
+        margin: 1rem 0;
+        width: 100%;
+    }
+}
