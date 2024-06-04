@@ -38,7 +38,7 @@ function SearchForm({
             onChange={handleSearch}
           />
 
-          <select onChange={handleCityFilter}>
+          <select className="search-form__menu" onChange={handleCityFilter}>
             <option value="">Select a city</option>
             <option value="Vancouver, BC, Canada">Vancouver</option>
             <option value="Seattle, Washington">Seattle</option>
@@ -46,7 +46,7 @@ function SearchForm({
             <option value="Montreal, Canada">Montreal</option>
           </select>
 
-          <select onChange={handlePriceFilter}>
+          <select className="search-form__menu" onChange={handlePriceFilter}>
             <option value="">Select a price range</option>
             <option value="30">Under $30</option>
             <option value="50">Under $50</option>
