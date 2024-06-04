@@ -2,12 +2,11 @@ import "./SearchForm.scss";
 import Filters from "../Filters/Filters";
 import React, { useState } from "react";
 
-
 function SearchForm({ setSearchQuery, setCategoryFilter }) {
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
   };
-  
+
   const handleCategoryFilter = (category) => {
     setCategoryFilter(category);
   };
@@ -25,12 +24,27 @@ function SearchForm({ setSearchQuery, setCategoryFilter }) {
             // value={searchQuery}
             onChange={handleSearch}
           />
-            <Filters categories={['Concerts', 'Conferences', 'Workshops', 'Art Exhibitions', 'Seminars', 'Trade Shows', 'Sports Events', 'Festivals', 'Webinars', 'Fundraisers']} setCategoryFilter={handleCategoryFilter} />
+          <Filters
+            categories={[
+              "Concerts",
+              "Conferences",
+              "Workshops",
+              "Art Exhibitions",
+              "Seminars",
+              "Trade Shows",
+              "Sports Events",
+              "Festivals",
+              "Webinars",
+              "Fundraisers",
+            ]}
+            setCategoryFilter={handleCategoryFilter}
+          />
 
-          <button type="submit" className="search-form__btn">SEARCH</button>
-          </div>
+          <button type="submit" className="search-form__btn">
+            SEARCH
+          </button>
+        </div>
       </form>
-
     </div>
   );
 }
