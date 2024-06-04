@@ -13,6 +13,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
   const [cityFilter, setCityFilter] = useState("");
+  const [priceFilter, setPriceFilter] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,10 +48,12 @@ function App() {
         event.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
         (!categoryFilter ||
           event.category.toLowerCase() === categoryFilter.toLowerCase()) &&
-          (!cityFilter || event.location.toLowerCase() === cityFilter.toLowerCase())
+        (!cityFilter ||
+          event.location.toLowerCase() === cityFilter.toLowerCase()) &&
+        (!priceFilter || event.cost <= parseInt(priceFilter))
     );
     setFilteredEvents(filtered);
-  }, [allEvents, searchQuery, categoryFilter, cityFilter]);
+  }, [allEvents, searchQuery, categoryFilter, cityFilter, priceFilter]);
 
   return (
     <div className="App">
@@ -61,6 +64,7 @@ function App() {
           setSearchQuery={setSearchQuery}
           setCategoryFilter={handleCategoryFilter}
           setCityFilter={setCityFilter}
+          setPriceFilter={setPriceFilter}
         />
         <Events events={filteredEvents} />
         <Footer />

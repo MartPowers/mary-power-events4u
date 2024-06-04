@@ -2,7 +2,12 @@ import "./SearchForm.scss";
 import Filters from "../Filters/Filters";
 import React, { useState } from "react";
 
-function SearchForm({ setSearchQuery, setCategoryFilter, setCityFilter }) {
+function SearchForm({
+  setSearchQuery,
+  setCategoryFilter,
+  setCityFilter,
+  setPriceFilter,
+}) {
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -13,6 +18,10 @@ function SearchForm({ setSearchQuery, setCategoryFilter, setCityFilter }) {
 
   const handleCityFilter = (event) => {
     setCityFilter(event.target.value);
+  };
+
+  const handlePriceFilter = (event) => {
+    setPriceFilter(event.target.value);
   };
 
   return (
@@ -35,6 +44,15 @@ function SearchForm({ setSearchQuery, setCategoryFilter, setCityFilter }) {
             <option value="Seattle, Washington">Seattle</option>
             <option value="Toronto, Canada">Toronto</option>
             <option value="Montreal, Canada">Montreal</option>
+          </select>
+
+          <select onChange={handlePriceFilter}>
+            <option value="">Select a price range</option>
+            <option value="30">Under $30</option>
+            <option value="50">Under $50</option>
+            <option value="100">Under $100</option>
+            <option value="200">Under $200</option>
+            <option value="500">Under $500</option>
           </select>
 
           <Filters
