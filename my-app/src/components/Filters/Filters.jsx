@@ -1,26 +1,26 @@
 import "./Filters.scss";
 
+function Filters({ categories, setCategoryFilter }) {
+  const handleCategoryFilter = (category) => {
+    setCategoryFilter(category);
+  };
 
-function Filters() {
   return (
     <div className="filters">
       <div className="filters__group">
         <p className="filters__text">filters:</p>
-        <button className="filters__btn">all</button>
+        <button key="All" onClick={() => handleCategoryFilter('All')} type="button">
+        All
+      </button>
       </div>
 
-      <div className="filters__section">
-        <button className="filters__btn">concerts</button>
-        <button className="filters__btn">conferences</button>
-        <button className="filters__btn">workshops</button>
-        <button className="filters__btn">seminars</button>
-        <button className="filters__btn">trade shows</button>
-        <button className="filters__btn">art exhibitions</button>
-        <button className="filters__btn">sports events</button>
-        <button className="filters__btn">festivals</button>
-        <button className="filters__btn">webinars</button>
-        <button className="filters__btn">fundraisers</button>
-      </div>
+      {categories.map((category) => (
+        <div className="filters__section">
+          <button key={category} onClick={() => handleCategoryFilter(category)} type="button">
+            {category}
+          </button>
+        </div>
+      ))}
     </div>
   );
 }
