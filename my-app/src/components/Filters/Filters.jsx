@@ -1,5 +1,6 @@
 import "./Filters.scss";
 
+
 function Filters() {
   return (
     <div className="filters">
