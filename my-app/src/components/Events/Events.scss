@@ -30,7 +30,12 @@
     }
 
     &__group{
+display: flex;
+flex-direction: column;
 
+&--load{
+    align-items: center;
+}
     }
 
     &__text{
@@ -50,5 +55,13 @@
         padding: .75rem 1.25rem;
         margin: 1rem 0;
         width: 100%;
+
+        &--load{
+            width: 50%;
+            color: black;
+            background: linear-gradient(135deg, rgba(214 ,255 ,52 ,1), rgba(214 ,255 ,52 ,0.8));
+            backdrop-filter: blur(60px);
+            -webkit-backdrop-filter: blur(60px);
+        }
     }
 }
