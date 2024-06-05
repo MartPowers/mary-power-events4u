@@ -38,6 +38,7 @@ function SearchForm({
             onChange={handleSearch}
           />
 
+<div className="search-form__container search-form__container--menus">
           <select className="search-form__menu" onChange={handleCityFilter}>
             <option value="">Select a city</option>
             <option value="Vancouver, BC, Canada">Vancouver</option>
@@ -54,6 +55,7 @@ function SearchForm({
             <option value="200">Under $200</option>
             <option value="500">Under $500</option>
           </select>
+          </div>
 
           <Filters
             categories={[
@@ -71,9 +73,9 @@ function SearchForm({
             setCategoryFilter={handleCategoryFilter}
           />
 
-          <button type="submit" className="search-form__btn">
+          {/* <button type="submit" className="search-form__btn">
             SEARCH
-          </button>
+          </button> */}
         </div>
       </form>
     </div>

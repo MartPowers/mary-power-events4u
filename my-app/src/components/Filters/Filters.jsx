@@ -7,10 +7,14 @@ function Filters({ categories, setCategoryFilter }) {
 
   return (
     <div className="filters">
+      
+        
+      <p className="filters__text">categories</p>
+      <div className="filters__section">
+   
       <div className="filters__group">
-        <p className="filters__text">filters:</p>
         <button
-          className="filters__btn"
+          className="filters__btn filters__btn--all"
           key="All"
           onClick={() => handleCategoryFilter("All")}
           type="button"
@@ -19,9 +23,8 @@ function Filters({ categories, setCategoryFilter }) {
         </button>
       </div>
 
-      <div className="filters__group">
         {categories.map((category) => (
-          <div className="filters__section">
+          <div className="filters__group">
             <button
               className="filters__btn"
               key={category}
