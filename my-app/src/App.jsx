@@ -21,6 +21,7 @@ function App() {
         const response = await axios.get("http://localhost:5000/events/search");
         setAllEvents(response.data);
         setFilteredEvents(allEvents);
+        console.log(response.data.image);
       } catch (error) {
         console.error("Error fetching data:", error);
       }

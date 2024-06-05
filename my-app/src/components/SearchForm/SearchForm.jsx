@@ -1,6 +1,7 @@
 import "./SearchForm.scss";
 import Filters from "../Filters/Filters";
 import React, { useState } from "react";
+import Search from "../../assets/icons/search-icon.png";
 
 function SearchForm({
   setSearchQuery,
@@ -26,8 +27,11 @@ function SearchForm({
 
   return (
     <div>
+      {/* <img src={Search} alt="icon" className="search-form__icon"/> */}
       <form className="search-form">
+      
         <div className="search-form__container">
+       
           <input
             type="text"
             id="search"
@@ -37,6 +41,7 @@ function SearchForm({
             // value={searchQuery}
             onChange={handleSearch}
           />
+          
 
 <div className="search-form__container search-form__container--menus">
           <select className="search-form__menu" onChange={handleCityFilter}>

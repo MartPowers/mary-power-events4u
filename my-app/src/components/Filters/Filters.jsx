@@ -1,5 +1,6 @@
 import "./Filters.scss";
 
+
 function Filters({ categories, setCategoryFilter }) {
   const handleCategoryFilter = (category) => {
     setCategoryFilter(category);

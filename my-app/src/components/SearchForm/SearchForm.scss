@@ -3,29 +3,44 @@
 
 .search-form {
   &__container {
-    margin: 0rem 1rem 0;
+    margin: 0rem 1rem 0 2rem;
 
     &--menus{
         margin: 1rem 0 0 0;
     }
   }
+
+//   &__icon{
+// width: 20px;
+// height: 20px;
+// position: absolute;
+// left: 17px;
+// top: 15.75rem;
+//   }
+
   &__group {
     display: flex;
     flex-direction: row;
     align-items: baseline;
   }
   &__input {
+    padding-left: 3rem;
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
+      rgba(255, 255, 255, 0.1),
+     
     );
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     border-radius: 1.75rem;
     border: none;
     margin: 0.5rem 0;
-    width: 275px;
+
+    background:  url("../../assets/icons/search-icon.png");
+    background-repeat: no-repeat;
+    color: white;
+    width: 235px;
     height: 40px;
   }
 
