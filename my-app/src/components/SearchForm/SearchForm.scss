@@ -5,6 +5,10 @@
   &__container {
     margin: 0rem 1rem 0 2rem;
 
+    @include tablet{
+        margin: 1rem 2rem 0 6rem;
+    }
+
     &--menus {
       margin: 1rem 0 0 0;
     }
@@ -33,6 +37,11 @@
 
     width: 235px;
     height: 40px;
+
+    @include tablet{
+      width: 450px;
+    }
+
   }
 
   &__menu {

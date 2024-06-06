@@ -17,6 +17,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablet{
+      margin: 1rem 2rem;
+    }
   }
 
   &__group {

@@ -2,9 +2,22 @@
 @use "../../styles/partials/mixins" as *;
 
 .events {
+
+    @include tablet{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2.5rem 2rem 0 6rem;
+    }
   &__container {
     height: 300px;
     margin: 1rem;
+
+    @include tablet{
+        flex: 1 1 48%;
+        margin: 0;
+
+    }
   }
 
   &__card {
@@ -17,6 +30,10 @@
     -webkit-backdrop-filter: blur(20px);
     border-radius: 1.75rem;
     width: 100%;
+
+    @include tablet{
+        width: 275px;
+    }
   }
 
   &__img {
@@ -26,6 +43,7 @@
 
   &__info {
     margin: 1rem;
+    
   }
 
   &__title {
@@ -38,6 +56,10 @@
 
     &--load {
       align-items: center;
+
+      @include tablet{
+        align-items:start;
+      }
     }
   }
 

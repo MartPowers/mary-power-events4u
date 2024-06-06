@@ -11,5 +11,9 @@
         color: white;
         margin: 2rem 2rem 0 2rem;
         width: 70%;
+
+        @include tablet{
+            margin: 5rem 2rem 0 6rem;
+        }
     }
 }

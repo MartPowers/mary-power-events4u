@@ -4,6 +4,8 @@
 .filters {
   margin: 1rem 0 0 0;
 
+
+
   &__group {
     display: flex;
     align-items: baseline;
@@ -55,5 +57,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+
+    @include tablet{
+        width: 550px;
+    }
+
   }
 }

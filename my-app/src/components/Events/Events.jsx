@@ -3,10 +3,10 @@ import "../../styles/partials/_global.scss";
 import React, { useState } from "react";
 
 function Events({ events }) {
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const handleLoadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 3);
+    setVisibleCount((prevCount) => prevCount + 6);
   };
 
   return (

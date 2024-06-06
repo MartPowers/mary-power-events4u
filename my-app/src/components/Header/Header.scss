@@ -20,7 +20,7 @@ body {
   margin: 1rem;
 
   @include tablet {
-    height: 73px;
+    height: 65px;
     margin: 1rem 2rem;
   }
 
@@ -41,8 +41,8 @@ body {
     width: 31px;
 
     @include tablet {
-      height: 45px;
-      width: 45px;
+      // height: 45px;
+      // width: 45px;
     }
   }
 
