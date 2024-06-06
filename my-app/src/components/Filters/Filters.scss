@@ -2,22 +2,21 @@
 @use "../../styles/partials/mixins" as *;
 
 .filters {
-
-margin: 1rem 0 0 0;
+  margin: 1rem 0 0 0;
 
   &__group {
-display: flex;
-align-items: baseline;
+    display: flex;
+    align-items: baseline;
   }
 
   &__text {
     color: white;
-    margin: 1rem 1rem .5rem 0.25rem;
+    margin: 1rem 1rem 0.5rem 0.25rem;
   }
 
   &__btn {
     color: white;
-    font-size:x-small;
+    font-size: x-small;
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.1),
@@ -31,8 +30,21 @@ align-items: baseline;
     padding: 0.5rem;
     margin: 0.35rem 0.25rem;
 
-    &--all{
-        // width:50px;
+    &.active {
+      background-color: $green;
+      color: black;
+    }
+
+    &:hover {
+      background-color: $green;
+      color: black;
+    }
+
+    &--all {
+      &:hover {
+        background-color: $yellow;
+        color: black;
+      }
     }
   }
 

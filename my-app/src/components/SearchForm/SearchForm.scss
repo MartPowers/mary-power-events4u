@@ -5,18 +5,10 @@
   &__container {
     margin: 0rem 1rem 0 2rem;
 
-    &--menus{
-        margin: 1rem 0 0 0;
+    &--menus {
+      margin: 1rem 0 0 0;
     }
   }
-
-//   &__icon{
-// width: 20px;
-// height: 20px;
-// position: absolute;
-// left: 17px;
-// top: 15.75rem;
-//   }
 
   &__group {
     display: flex;
@@ -28,8 +20,7 @@
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1),
-     
+      rgba(255, 255, 255, 0.1)
     );
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
@@ -37,20 +28,24 @@
     border: none;
     margin: 0.5rem 0;
 
-    background:  url("../../assets/icons/search-icon.png");
+    background: url("../../assets/icons/search-icon.png");
     background-repeat: no-repeat;
-  
+
     width: 235px;
     height: 40px;
   }
 
-  &__menu{
+  &__menu {
     background-color: $green;
     color: black;
     border: 1px solid $yellow;
     border-radius: 50px;
-    padding: .65rem;
-    margin: 0 .5rem 0 0;
+    padding: 0.65rem;
+    margin: 0 0.5rem 0 0;
+
+    &:hover {
+      background-color: $yellow;
+    }
   }
 
   &__btn {
@@ -61,6 +56,6 @@
     padding: 0.75rem 1.25rem;
     width: 135px;
     height: 40px;
-    margin: 1rem 0 ;
+    margin: 1rem 0;
   }
 }
