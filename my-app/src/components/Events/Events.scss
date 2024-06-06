@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .events {
+    margin: 2rem 0;
 
     @include tablet{
         display: grid;
@@ -97,6 +98,7 @@
     }
 
     &--load {
+        height: 42px;
       width: 50%;
       color: black;
       border: none;
