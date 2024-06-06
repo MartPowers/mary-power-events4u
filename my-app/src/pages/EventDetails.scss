@@ -1,0 +1,26 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
+.event-details{
+
+    &__container{
+        margin: 3rem 2rem 0 2rem;
+    }
+
+    &__group{
+        margin: 1rem 0;
+    }
+
+    &__img{
+width: 100%;
+    }
+
+    &__text{
+        color: white;
+        font-weight: 200;
+        margin: 0.25em 0        ;
+
+    }
+
+
+}

@@ -1,0 +1,87 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.ticket{
+
+
+    &__container{
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0)
+          );
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border-radius: 1.75rem;
+          width: 300px;
+          height: 250px ;
+          margin: 2rem 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+    }
+
+    &__text-box{
+        width: 80%;
+        height: 60%;
+        background-color: white;
+        border-radius: 1.75rem;
+        margin: 1rem;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        &--count{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            // padding: 1rem;
+        }
+    }
+
+    &__text{
+        margin: 0.5rem 0 0.25rem 1rem;
+        font-size: small;
+    }
+
+    &__shape{
+        margin: .75rem;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        border: none;
+        background-color: $blue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__btn{
+       
+        background-color: $green;
+        border: none;
+        border-radius: 30px;
+        color: black;
+        padding: 0.25rem 1.25rem;
+        width: 70%;
+        height: 40px;
+        margin: 0 1rem 1rem 1rem;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $yellow;
+          }
+    }
+}

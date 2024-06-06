@@ -1,6 +1,7 @@
 import "./Events.scss";
 import "../../styles/partials/_global.scss";
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 function Events({ events }) {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -25,7 +26,7 @@ function Events({ events }) {
                 <p className="events__text events__text--price">{event.cost}</p>
               </div>
 
-              <button className="events__btn">MORE DETAILS</button>
+              <Link to={`/events/${event.title}`} className="events__btn">MORE DETAILS</Link>
             </div>
           </div>
         </div>

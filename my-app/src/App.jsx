@@ -4,6 +4,8 @@ import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import SearchForm from "./components/SearchForm/SearchForm";
 import Events from "./components/Events/Events";
+import EventDetails from './pages/EventDetails';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
@@ -57,21 +59,30 @@ function App() {
   }, [allEvents, searchQuery, categoryFilter, cityFilter, priceFilter]);
 
   return (
-    <div className="App">
-      <div className="main-content">
-        <Header />
-        <Hero />\
-        <SearchForm
-          setSearchQuery={setSearchQuery}
-          setCategoryFilter={handleCategoryFilter}
-          setCityFilter={setCityFilter}
-          setPriceFilter={setPriceFilter}
-        />
-        <Events events={filteredEvents} />
-        <Footer />
+    <Router>
+      <div className="App">
+        <div className="main-content">
+          <Header />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <SearchForm
+                  setSearchQuery={setSearchQuery}
+                  setCategoryFilter={handleCategoryFilter}
+                  setCityFilter={setCityFilter}
+                  setPriceFilter={setPriceFilter}
+                />
+                <Events events={filteredEvents} />
+              </>
+            } />
+           <Route path="/events/:title" element={<EventDetails events={allEvents} />} />
+          </Routes>
+          <Footer />
+        </div>
+        <Background />
       </div>
-      <Background />
-    </div>
+    </Router>
   );
 }
 
