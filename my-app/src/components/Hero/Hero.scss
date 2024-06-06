@@ -15,5 +15,11 @@
         @include tablet{
             margin: 5rem 2rem 0 6rem;
         }
+
+        @include desktop{
+            margin: 7rem 2rem 0 6rem;
+            width: 40%;
+            font-size:xx-large;
+        }
     }
 }
