@@ -1,3 +1,7 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+
 import Background from "./components/Background/Background";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -5,9 +9,6 @@ import Hero from "./components/Hero/Hero";
 import SearchForm from "./components/SearchForm/SearchForm";
 import Events from "./components/Events/Events";
 import EventDetails from './pages/EventDetails';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import axios from "axios";
-import React, { useState, useEffect } from "react";
 
 function App() {
   const [allEvents, setAllEvents] = useState([]);
@@ -44,19 +45,28 @@ function App() {
     }
   };
 
+useEffect(() => {
+console.log(categoryFilter);
+},[categoryFilter]);
+
   useEffect(() => {
     // Filter events based on searchQuery and categoryFilter
+console.log(searchQuery);
     const filtered = allEvents.filter(
       (event) =>
         event.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        (!categoryFilter ||
+        (!categoryFilter || 
+          categoryFilter === "All" ||
           event.category.toLowerCase() === categoryFilter.toLowerCase()) &&
         (!cityFilter ||
           event.location.toLowerCase() === cityFilter.toLowerCase()) &&
         (!priceFilter || event.cost <= parseInt(priceFilter))
     );
+    
+    console.log(filtered);
     setFilteredEvents(filtered);
   }, [allEvents, searchQuery, categoryFilter, cityFilter, priceFilter]);
+
 
   return (
     <Router>
@@ -81,6 +91,7 @@ function App() {
           <Footer />
         </div>
         <Background />
+
       </div>
     </Router>
   );

@@ -14,13 +14,15 @@
         font-size: x-large;
 
         @include tablet{
-            margin: 5rem 2rem 0 6rem;
+            width: 60%;
+            margin: 5rem 2rem 2rem 6rem;
+            font-size:xx-large;
         }
 
         @include desktop{
             margin: 7rem 2rem 0 6rem;
             width: 40%;
-            font-size:xx-large;
+            
         }
     }
 }

@@ -20,17 +20,40 @@
           justify-content: center;
           align-items: center;
           flex-direction: column;
+
+          @include tablet{
+            margin:0;
+          }
+
+          @include desktop{
+            margin: 0 4rem;
+            width: 400px;
+            height: 350px ;
+          }
     }
 
     &__text-box{
         width: 80%;
         height: 60%;
-        background-color: white;
+
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 1)
+          );
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+        // background-color: white;
         border-radius: 1.75rem;
         margin: 1rem;
 
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+
+        @include desktop{
+            margin: 2rem;
+        }
     }
 
     &__group{
@@ -44,11 +67,20 @@
             align-items: center;
             // padding: 1rem;
         }
+
+        
+        @include desktop{
+            margin: 1rem;
+        }
     }
 
     &__text{
         margin: 0.5rem 0 0.25rem 1rem;
         font-size: small;
+
+        @include desktop{
+            font-size: medium;
+        }
     }
 
     &__shape{
