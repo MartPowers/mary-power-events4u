@@ -1,7 +1,7 @@
 import "./Header.scss";
 import { Link } from 'react-router-dom';
 
-function header() {
+function header({ onShowModal }) {
   return (
     //outer div is container
     <div className="header">
@@ -13,7 +13,7 @@ function header() {
 
         {/* create an event button */}
         {/* outer container */}
-        <button className="header__btn"  type="submit">
+        <button className="header__btn" onClick={onShowModal} type="submit">
           CREATE AN EVENT
         </button>
       </div>
