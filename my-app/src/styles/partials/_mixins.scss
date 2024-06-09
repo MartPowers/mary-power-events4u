@@ -12,3 +12,8 @@
         @content;
     }
 }
+
+@mixin drop-shadow($offset-x: 0px, $offset-y: 2px, $blur-radius: 4px, $color: rgba(0, 0, 0, 0.1)) {
+    box-shadow: $offset-x $offset-y $blur-radius $color;
+  }
+  

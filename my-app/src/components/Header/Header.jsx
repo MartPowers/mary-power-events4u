@@ -14,7 +14,7 @@ function header({ onShowModal }) {
         {/* create an event button */}
         {/* outer container */}
         <button className="header__btn" onClick={onShowModal} type="submit">
-          CREATE AN EVENT
+          Create an event
         </button>
       </div>
     </div>

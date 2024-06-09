@@ -9,9 +9,7 @@ import Hero from "./components/Hero/Hero";
 import SearchForm from "./components/SearchForm/SearchForm";
 import Events from "./components/Events/Events";
 import EventDetails from "./pages/EventDetails";
-
 import Modal from "./components/Modal/Modal";
-import ModalComplete from "./components/Modal/ModalComplete";
 
 function App() {
   const [allEvents, setAllEvents] = useState([]);
@@ -55,18 +53,28 @@ function App() {
   }, [categoryFilter]);
 
   useEffect(() => {
-    // Filter events based on searchQuery and categoryFilter
+    // Filter events based on searchQuery, categoryFilter, cityFilter, and priceFilter
     console.log(searchQuery);
-    const filtered = allEvents.filter(
-      (event) =>
-        event.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        (!categoryFilter ||
-          categoryFilter === "All" ||
-          event.category.toLowerCase() === categoryFilter.toLowerCase()) &&
-        (!cityFilter ||
-          event.location.toLowerCase() === cityFilter.toLowerCase()) &&
-        (!priceFilter || event.cost <= parseInt(priceFilter))
-    );
+  
+    const filtered = allEvents.filter((event) => {
+      if (!event.title.toLowerCase().includes(searchQuery.toLowerCase())) {
+        return false;
+      }
+  
+      if (categoryFilter && categoryFilter !== "All" && event.category.toLowerCase() !== categoryFilter.toLowerCase()) {
+        return false;
+      }
+  
+      if (cityFilter && event.location.toLowerCase() !== cityFilter.toLowerCase()) {
+        return false;
+      }
+  
+      if (priceFilter && event.cost > parseInt(priceFilter)) {
+        return false;
+      }
+  
+      return true;
+    });
 
     console.log(filtered);
     setFilteredEvents(filtered);
@@ -80,36 +88,13 @@ function App() {
     setShowModal(false);
   };
 
-
   return (
     <Router>
       <div className="App">
         <div className="main-content">
           <Header onShowModal={handleShowModal} />
 
-          <Modal show={showModal} onClose={handleCloseModal}>
-            {/* <form onSubmit={handleSubmit}>
-              <div>
-                <label>Event Title:</label>
-                <input type="text" required />
-              </div>
-              <div>
-                <label>Event Date:</label>
-                <input type="date" required />
-              </div>
-              <div>
-                <label>Event Location:</label>
-                <input type="text" required />
-              </div>
-              <div>
-                <label>Event Description:</label>
-                <textarea required></textarea>
-              </div>
-              <button type="submit" className="button">
-                Submit
-              </button>
-            </form> */}
-          </Modal>
+          <Modal show={showModal} onClose={handleCloseModal}></Modal>
 
           <Routes>
             <Route
@@ -123,7 +108,15 @@ function App() {
                     setCityFilter={setCityFilter}
                     setPriceFilter={setPriceFilter}
                   />
-                  <Events events={filteredEvents} />
+                   {filteredEvents.length > 0 ? (
+                    <Events events={filteredEvents} />
+                  ) : (
+                    <div className="no-events">
+                    <div className="no-events__card">
+                    <p className="no-events__text">No events found</p>
+                    </div>
+                    </div>
+                  )}
                 </>
               }
             />

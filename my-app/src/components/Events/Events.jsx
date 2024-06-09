@@ -36,7 +36,7 @@ function Events({ events }) {
                 <p className="events__text events__text--price">$ {event.cost}</p>
               </div>
 
-              <Link to={`/events/${event.title}`} className="events__btn">MORE DETAILS</Link>
+              <Link to={`/events/${event.title}`} className="events__btn">More details</Link>
             </div>
           </div>
         </div>
