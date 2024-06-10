@@ -1,14 +1,22 @@
 @use "./variables" as *;
 
 @mixin tablet {
-    @media (min-width: $tablet-width){
-        @content;
-    }
-    
+  @media (min-width: $tablet-width) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width:$desktop-width) {
-        @content;
-    }
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin drop-shadow(
+  $offset-x: 0px,
+  $offset-y: 2px,
+  $blur-radius: 4px,
+  $color: rgba(0, 0, 0, 0.1)
+) {
+  box-shadow: $offset-x $offset-y $blur-radius $color;
 }

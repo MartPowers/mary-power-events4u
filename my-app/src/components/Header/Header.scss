@@ -3,7 +3,6 @@
 
 body {
   margin: 0;
-  //   background-color: $site-black;
 }
 
 .header {
@@ -24,7 +23,6 @@ body {
     margin: 1rem 2rem;
   }
 
-
   &__container {
     display: flex;
     justify-content: space-between;
@@ -40,10 +38,13 @@ body {
     border-radius: 50px;
     height: 31px;
     width: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include tablet {
-      // height: 45px;
-      // width: 45px;
+    &--link {
+      text-decoration: none;
+      color: $green;
     }
   }
 
@@ -53,6 +54,7 @@ body {
     border-radius: 30px;
     color: white;
     padding: 0 1.25rem;
+    font-size: small;
 
     &:hover {
       background-color: $blue;
@@ -60,8 +62,8 @@ body {
     }
 
     @include tablet {
-      padding: 0 2rem;
-      font-size: large;
+      padding: 0.5rem 2rem;
+      font-size: medium;
     }
   }
 }
