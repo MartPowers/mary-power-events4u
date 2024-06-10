@@ -1,28 +1,25 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.hero{
+.hero {
+  &__container {
+  }
 
-    &__container{
+  &__title {
+    color: white;
+    margin: 3rem 2rem 0 2rem;
+    width: 70%;
+    font-size: x-large;
 
+    @include tablet {
+      width: 60%;
+      margin: 5rem 2rem 2rem 6rem;
+      font-size: xx-large;
     }
 
-    &__title{
-        color: white;
-        margin: 3rem 2rem 0 2rem;
-        width: 70%;
-        font-size: x-large;
-
-        @include tablet{
-            width: 60%;
-            margin: 5rem 2rem 2rem 6rem;
-            font-size:xx-large;
-        }
-
-        @include desktop{
-            margin: 7rem 2rem 0 6rem;
-            width: 40%;
-            
-        }
+    @include desktop {
+      margin: 7rem 2rem 0 6rem;
+      width: 40%;
     }
+  }
 }

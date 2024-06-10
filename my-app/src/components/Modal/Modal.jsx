@@ -14,7 +14,12 @@ function Modal({ show, onClose }) {
         <form className="modal__form">
           <div className="modal__container">
             <label className="modal__input--label">Event Title:</label>
-            <input className="modal__input" type="text" required placeholder="Title Your Event"/>
+            <input
+              className="modal__input"
+              type="text"
+              required
+              placeholder="Title Your Event"
+            />
           </div>
           <div className="modal__container">
             <label className="modal__input--label">Event Date:</label>
@@ -22,27 +27,47 @@ function Modal({ show, onClose }) {
           </div>
           <div className="modal__container">
             <label className="modal__input--label">Event Location:</label>
-            <input className="modal__input" type="text" required placeholder="Add Address"/>
+            <input
+              className="modal__input"
+              type="text"
+              required
+              placeholder="Add Address"
+            />
           </div>
 
           <div className="modal__container">
             <label className="modal__input--label">Event Category</label>
-            <input className="modal__input" type="text" required placeholder="Concert, Workshop etc."/>
+            <input
+              className="modal__input"
+              type="text"
+              required
+              placeholder="Concert, Workshop etc."
+            />
           </div>
 
           <div className="modal__container">
             <label className="modal__input--label">Event Description:</label>
-            <textarea className="modal__input" required ></textarea>
+            <textarea className="modal__input" required></textarea>
           </div>
 
           <div className="modal__container">
             <label className="modal__input--label">Phone Number:</label>
-            <input className="modal__input" type="text" required placeholder="Add Phone Number Here"/>
+            <input
+              className="modal__input"
+              type="text"
+              required
+              placeholder="Add Phone Number Here"
+            />
           </div>
 
           <div className="modal__container">
             <label className="modal__input--label">Email:</label>
-            <input className="modal__input" type="text" required placeholder="Add Email Here"/>
+            <input
+              className="modal__input"
+              type="text"
+              required
+              placeholder="Add Email Here"
+            />
           </div>
 
           <button type="submit" className="modal__btn">

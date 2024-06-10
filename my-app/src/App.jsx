@@ -55,24 +55,31 @@ function App() {
   useEffect(() => {
     // Filter events based on searchQuery, categoryFilter, cityFilter, and priceFilter
     console.log(searchQuery);
-  
+
     const filtered = allEvents.filter((event) => {
       if (!event.title.toLowerCase().includes(searchQuery.toLowerCase())) {
         return false;
       }
-  
-      if (categoryFilter && categoryFilter !== "All" && event.category.toLowerCase() !== categoryFilter.toLowerCase()) {
+
+      if (
+        categoryFilter &&
+        categoryFilter !== "All" &&
+        event.category.toLowerCase() !== categoryFilter.toLowerCase()
+      ) {
         return false;
       }
-  
-      if (cityFilter && event.location.toLowerCase() !== cityFilter.toLowerCase()) {
+
+      if (
+        cityFilter &&
+        event.location.toLowerCase() !== cityFilter.toLowerCase()
+      ) {
         return false;
       }
-  
+
       if (priceFilter && event.cost > parseInt(priceFilter)) {
         return false;
       }
-  
+
       return true;
     });
 
@@ -108,13 +115,13 @@ function App() {
                     setCityFilter={setCityFilter}
                     setPriceFilter={setPriceFilter}
                   />
-                   {filteredEvents.length > 0 ? (
+                  {filteredEvents.length > 0 ? (
                     <Events events={filteredEvents} />
                   ) : (
                     <div className="no-events">
-                    <div className="no-events__card">
-                    <p className="no-events__text">No events found</p>
-                    </div>
+                      <div className="no-events__card">
+                        <p className="no-events__text">No events found</p>
+                      </div>
                     </div>
                   )}
                 </>

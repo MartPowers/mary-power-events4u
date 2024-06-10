@@ -1,7 +1,5 @@
 import "./SearchForm.scss";
 import Filters from "../Filters/Filters";
-import React, { useState } from "react";
-import Search from "../../assets/icons/search-icon.png";
 
 function SearchForm({
   setSearchQuery,
@@ -27,7 +25,6 @@ function SearchForm({
 
   return (
     <div>
-      {/* <img src={Search} alt="icon" className="search-form__icon"/> */}
       <form className="search-form">
         <div className="search-form__container">
           <input
@@ -36,7 +33,6 @@ function SearchForm({
             name="search"
             placeholder="search events by title"
             className="search-form__input"
-            // value={searchQuery}
             onChange={handleSearch}
           />
 
@@ -74,10 +70,6 @@ function SearchForm({
             ]}
             setCategoryFilter={handleCategoryFilter}
           />
-
-          {/* <button type="submit" className="search-form__btn">
-            SEARCH
-          </button> */}
         </div>
       </form>
     </div>

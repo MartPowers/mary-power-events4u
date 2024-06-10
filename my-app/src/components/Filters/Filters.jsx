@@ -18,7 +18,6 @@ function Filters({ categories, setCategoryFilter }) {
             className={`filters__btn filters__btn--all ${
               activeCategory === "All" ? "active" : ""
             }`}
-            // key="All"
             onClick={() => handleCategoryFilter("All")}
             type="button"
           >
@@ -32,7 +31,6 @@ function Filters({ categories, setCategoryFilter }) {
               className={`filters__btn ${
                 activeCategory === category ? "active" : ""
               }`}
-              // key={category}
               onClick={() => handleCategoryFilter(category)}
               type="button"
             >

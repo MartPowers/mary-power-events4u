@@ -4,9 +4,9 @@
 .filters {
   margin: 2rem 0 0 0;
 
-@include desktop{
+  @include desktop {
     margin: 2rem 0 0 0;
-}
+  }
 
   &__group {
     display: flex;
@@ -53,16 +53,14 @@
   }
 
   &__section {
-    // margin: 1rem;
     width: 360px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
 
-    @include tablet{
-        width: 550px;
+    @include tablet {
+      width: 550px;
     }
-
   }
 }

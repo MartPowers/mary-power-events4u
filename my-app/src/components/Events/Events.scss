@@ -2,34 +2,32 @@
 @use "../../styles/partials/mixins" as *;
 
 .events {
-    margin: 2rem 0;
+  margin: 2rem 0;
 
-    @include tablet{
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 2.5rem 2rem 0 6rem;
-    }
+  @include tablet {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2.5rem 2rem 0 6rem;
+  }
 
-    @include desktop{
-        grid-template-columns: repeat(3, 1fr);
-        margin: 3.5rem 2rem 0 6rem;
-    }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 3.5rem 2rem 0 6rem;
+  }
 
   &__container {
     height: 320px;
     margin: 1rem;
 
-    @include tablet{
-        flex: 1 1 48%;
-        margin: 0;
-
+    @include tablet {
+      flex: 1 1 48%;
+      margin: 0;
     }
 
-    @include desktop{
-     height: 335px;
-     
-  }
+    @include desktop {
+      height: 335px;
+    }
   }
 
   &__card {
@@ -48,17 +46,16 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: scale(1.05); 
+      transform: scale(1.05);
       @include drop-shadow(0px, 8px, 16px, rgba(0, 0, 0, 0.3));
     }
 
-    @include tablet{
-        width: 275px;
+    @include tablet {
+      width: 275px;
     }
 
-    @include desktop{
-        width: 325px;
-       
+    @include desktop {
+      width: 325px;
     }
   }
 
@@ -67,14 +64,13 @@
     height: 150px;
     border-radius: 1.75rem;
 
-    @include desktop{
+    @include desktop {
       height: 175px;
     }
   }
 
   &__info {
     margin: 0rem 1rem;
-    
   }
 
   &__title {
@@ -86,13 +82,13 @@
   &__group {
     display: flex;
     flex-direction: column;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 
     &--load {
       align-items: center;
 
-      @include tablet{
-        align-items:start;
+      @include tablet {
+        align-items: start;
       }
     }
   }
@@ -104,7 +100,7 @@
 
     &--price {
       font-weight: 600;
-      margin-top: .25rem;
+      margin-top: 0.25rem;
     }
   }
 
@@ -120,7 +116,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 
     &:hover {
       background-color: $blue;
@@ -128,7 +123,7 @@
     }
 
     &--load {
-        height: 42px;
+      height: 42px;
       width: 50%;
       color: black;
       border: none;

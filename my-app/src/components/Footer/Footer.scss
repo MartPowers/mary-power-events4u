@@ -18,11 +18,11 @@
     align-items: center;
     justify-content: center;
 
-    @include tablet{
+    @include tablet {
       margin: 1rem 2rem;
     }
 
-    @include desktop{
+    @include desktop {
       margin: 1rem 2rem;
     }
   }
