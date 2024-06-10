@@ -1,15 +1,47 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.footer{
+.footer {
+  &__container {
+    border-radius: 1.75rem;
+    height: 10vh;
+    width: 90%;
+    margin: 1rem;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &__container{
-        border-radius: 1.75rem;
-        height:10vh;
-        width: 100%;
-        margin: 1rem;
-        background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+    @include tablet {
+      margin: 1rem 2rem;
     }
+
+    @include desktop {
+      margin: 1rem 2rem;
+    }
+  }
+
+  &__group {
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    padding: 0.5rem;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: small;
+    font-weight: 100;
+    margin: 0;
+  }
 }

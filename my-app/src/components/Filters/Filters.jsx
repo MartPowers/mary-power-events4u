@@ -1,24 +1,43 @@
-import React from "react";
+import "./Filters.scss";
+import React, { useState } from "react";
 
-function Filters() {
+function Filters({ categories, setCategoryFilter }) {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const handleCategoryFilter = (category) => {
+    setActiveCategory(category);
+    setCategoryFilter(category);
+  };
+
   return (
     <div className="filters">
-      <div className="filters__group">
-        <p className="filters__text">filters:</p>
-        <button className="filters__btn">all</button>
-      </div>
-
+      <p className="filters__text">categories</p>
       <div className="filters__section">
-        <button className="filters__btn">concerts</button>
-        <button className="filters__btn">conferences</button>
-        <button className="filters__btn">workshops</button>
-        <button className="filters__btn">seminars</button>
-        <button className="filters__btn">trade shows</button>
-        <button className="filters__btn">art exhibitions</button>
-        <button className="filters__btn">sports events</button>
-        <button className="filters__btn">festivals</button>
-        <button className="filters__btn">webinars</button>
-        <button className="filters__btn">fundraisers</button>
+        <div className="filters__group">
+          <button
+            className={`filters__btn filters__btn--all ${
+              activeCategory === "All" ? "active" : ""
+            }`}
+            onClick={() => handleCategoryFilter("All")}
+            type="button"
+          >
+            All
+          </button>
+        </div>
+
+        {categories.map((category) => (
+          <div className="filters__group" key={category}>
+            <button
+              className={`filters__btn ${
+                activeCategory === category ? "active" : ""
+              }`}
+              onClick={() => handleCategoryFilter(category)}
+              type="button"
+            >
+              {category}
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );

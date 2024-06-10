@@ -1,0 +1,112 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.ticket {
+  &__container {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 1.75rem;
+    width: 300px;
+    height: 250px;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    @include desktop {
+      margin: 0 5rem;
+      width: 400px;
+      height: 350px;
+    }
+  }
+
+  &__text-box {
+    width: 80%;
+    height: 60%;
+
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 1)
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 1.75rem;
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include desktop {
+      margin: 2rem;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &--count {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include desktop {
+      margin: 1rem;
+    }
+  }
+
+  &__text {
+    margin: 0.5rem 0 0.25rem 1rem;
+    font-size: small;
+
+    @include desktop {
+      font-size: medium;
+    }
+  }
+
+  &__shape {
+    margin: 0.75rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: $blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__btn {
+    background-color: $green;
+    border: none;
+    border-radius: 30px;
+    color: black;
+    padding: 0.25rem 1.25rem;
+    width: 70%;
+    height: 40px;
+    margin: 0 1rem 1rem 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}

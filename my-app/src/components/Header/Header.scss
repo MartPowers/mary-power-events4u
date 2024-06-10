@@ -3,20 +3,23 @@
 
 body {
   margin: 0;
-//   background-color: $site-black;
 }
 
 .header {
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.08)
+  );
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 1.75rem;
-  width: 100%;
+  width: 90%;
   height: 61px;
   margin: 1rem;
 
-  @include tablet{
-    height: 73px;
+  @include tablet {
+    height: 65px;
     margin: 1rem 2rem;
   }
 
@@ -25,8 +28,8 @@ body {
     justify-content: space-between;
     padding: 1rem;
 
-    @include tablet{
-        padding: 1rem 2rem;
+    @include tablet {
+      padding: 1rem 2rem;
     }
   }
 
@@ -35,25 +38,32 @@ body {
     border-radius: 50px;
     height: 31px;
     width: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include tablet{
-        height: 45px;
-        width: 45px;
+    &--link {
+      text-decoration: none;
+      color: $green;
     }
   }
 
   &__btn {
-    background-color: $blue;
-    border: none;
+    background: none;
+    border: 1.5px solid $blue;
     border-radius: 30px;
     color: white;
     padding: 0 1.25rem;
+    font-size: small;
 
-    @include tablet{
-        padding: 0 2rem;
-        font-size: large;
+    &:hover {
+      background-color: $blue;
+      border: none;
+    }
+
+    @include tablet {
+      padding: 0.5rem 2rem;
+      font-size: medium;
     }
   }
-
-
 }
